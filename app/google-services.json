@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "669028181064-5il11cljb1480nb9smif5slc8gppl4fc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.galactic_ninja.nota.nota",
+            "certificate_hash": "bc28c2ca7471e6a539e74a245e5da7520fa68071"
+          }
+        },
+        {
           "client_id": "669028181064-ghe68rkqou1t94rk0275hbb1vfdp9kca.apps.googleusercontent.com",
           "client_type": 3
         }

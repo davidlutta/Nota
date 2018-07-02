@@ -21,9 +21,9 @@
         <activity android:name=".UserInterface.CreateAccount">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.galactic_ninja.nota.nota.UserInterface.MainActivity">
-            </meta-data>
+                android:value="com.galactic_ninja.nota.nota.UserInterface.MainActivity"></meta-data>
         </activity>
+        <activity android:name=".UserInterface.Holder"></activity>
     </application>
 
 </manifest>
