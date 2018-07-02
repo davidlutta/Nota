@@ -5,9 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    tools:context=".MainActivity">
+    tools:context=".UserInterface.MainActivity">
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/logoImageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_alignParentTop="true"
@@ -25,7 +25,9 @@
         app:cardCornerRadius="25dp"
         android:elevation="10dp"
         app:cardBackgroundColor="@color/colorPrimaryDark"
-        android:layout_marginBottom="112dp" >
+        android:layout_marginBottom="112dp"
+        android:id="@+id/loginButton"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -51,7 +53,9 @@
         android:layout_centerHorizontal="true"
         app:cardBackgroundColor="@color/colorPrimary"
         android:elevation="10dp"
-        android:layout_marginBottom="45dp">
+        android:layout_marginBottom="45dp"
+        android:id="@+id/createAccountButton"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -69,7 +73,7 @@
     </android.support.v7.widget.CardView>
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/logoTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -93,7 +97,7 @@
             android:layout_height="match_parent">
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/emailEditText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -101,6 +105,7 @@
                 android:background="@android:color/transparent"
                 android:layout_centerInParent="true"
                 android:hint="Email"
+                android:drawableLeft="@drawable/ic_action_user"
                 android:textColorHint="@color/colorPrimaryDark"
                 android:textColor="@color/colorAccent"
                 />
@@ -127,6 +132,7 @@
                 android:background="@android:color/transparent"
                 android:layout_centerInParent="true"
                 android:hint="Password"
+                android:drawableLeft="@drawable/ic_action_password"
                 android:textColorHint="@color/colorPrimaryDark"
                 android:textColor="@color/colorAccent"
                 />
