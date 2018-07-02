@@ -15,36 +15,6 @@
         android:layout_marginTop="60dp"
         app:srcCompat="@drawable/logotwo" />
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:background="@color/colorAccent"
-        android:ems="10"
-        android:elevation="10dp"
-        android:hint="Enter Email"
-        android:textColorHint="@color/colorWhite"
-        android:drawableLeft="@drawable/ic_action_user"
-        android:inputType="textPersonName"
-        android:textColor="@color/colorWhite"
-        android:textSize="25dp" />
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="191dp"
-        android:ems="10"
-        android:background="@color/colorAccent"
-        android:textColorHint="@color/colorWhite"
-        android:textColor="@color/colorWhite"
-        android:drawableLeft="@drawable/ic_action_password"
-        android:hint="Password"
-        android:textSize="26dp"
-        android:inputType="textPassword" />
 
     <android.support.v7.widget.CardView
         android:layout_width="300dp"
@@ -106,7 +76,60 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"
         android:textStyle="bold"
-        android:textColor="@color/colorPrimaryDark"
+        android:textColor="@color/colorDarkText"
         android:textSize="40sp"
         android:text="Nota !" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:background="@color/colorAccent"
+        app:cardCornerRadius="15dp"
+        android:elevation="10dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:background="@android:color/transparent"
+                android:layout_centerInParent="true"
+                android:hint="Email"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="185dp"
+        app:cardCornerRadius="15dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:background="@android:color/transparent"
+                android:layout_centerInParent="true"
+                android:hint="Password"
+                android:textColorHint="@color/colorPrimaryDark"
+                android:textColor="@color/colorAccent"
+                />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
 </RelativeLayout>

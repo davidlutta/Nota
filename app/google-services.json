@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "669028181064",
+    "firebase_url": "https://nota-de11a.firebaseio.com",
+    "project_id": "nota-de11a",
+    "storage_bucket": "nota-de11a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:669028181064:android:66f565a009d03a9c",
+        "android_client_info": {
+          "package_name": "com.galactic_ninja.nota.nota"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "669028181064-09vrgfas2fks4ip6b3vd9k129172jush.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.galactic_ninja.nota.nota",
+            "certificate_hash": "7c54bfb06b5b8f09275abd003be97b5688383584"
+          }
+        },
+        {
+          "client_id": "669028181064-ghe68rkqou1t94rk0275hbb1vfdp9kca.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdKqzp5ekIr4NqnPOaPkMePzXaPStkxzo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "669028181064-ghe68rkqou1t94rk0275hbb1vfdp9kca.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
