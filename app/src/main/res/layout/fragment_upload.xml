@@ -1,14 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".UserInterface.UploadFrag">
+    <android.support.v7.widget.CardView
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="20dp"
+        android:elevation="10dp"
+        app:cardCornerRadius="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/statementTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Upload A New Note"
+                android:textSize="30sp"
+                android:layout_marginLeft="45dp"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:textFontWeight="20dp"
+                />
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:outlineAmbientShadowColor="@color/colorPrimaryDark"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="10dp"
+                    android:layout_marginTop="10dp"
+                    android:elevation="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/colorWhite"
+                    android:layout_weight="1"
+                    >
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Title"
+                        android:id="@+id/TitleEditText"
+                        android:textColorHint="@color/colorAccent"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/colorAccent"
+                        />
+                </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                app:cardBackgroundColor="@color/colorWhite"
+                android:layout_height="50dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="10dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Category"
+                    android:id="@+id/CategoryEditText"
+                    android:textColorHint="@color/colorAccent"
+                    android:background="@android:color/transparent"
+                    android:layout_gravity="center"
+                    android:textColor="@color/colorAccent"
+                    />
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                app:cardBackgroundColor="@color/colorWhite"
+                android:layout_height="250dp"
+                app:cardCornerRadius="10dp"
+                android:elevation="10dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:layout_marginTop="10dp"
+                >
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/NoteEditText"
+                    android:hint="Start Here..."
+                    android:textColorHint="@color/colorAccent"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/colorAccent"
+                    />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                app:cardCornerRadius="25dp"
+                android:elevation="10dp"
+                app:cardBackgroundColor="@color/colorPrimaryDark"
+                android:id="@+id/UploadButton"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upload"
+                        android:layout_centerInParent="true"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20dp"
+                        />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
 
 </FrameLayout>
