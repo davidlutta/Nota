@@ -8,11 +8,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.galactic_ninja.nota.nota.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.zip.Inflater;
 
 import butterknife.BindView;
@@ -29,8 +34,6 @@ public class UploadFrag extends Fragment implements View.OnClickListener    {
     public UploadFrag() {
         // Required empty public constructor
     }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -55,10 +58,28 @@ public class UploadFrag extends Fragment implements View.OnClickListener    {
     public void onClick(View view){
         switch (view.getId()){
             case R.id.UploadButton:
+                String title = mTitle.getText().toString().trim();
+                String category = mCategory.getText().toString().trim();
+                String note = mNote.getText().toString();
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 String uid = user.getUid();
-
+                DatabaseReference noteRef = FirebaseDatabase
+                        .getInstance()
+                        .getReference("notes")
+                        .child(uid);
+                Map<String,User> newNote = new HashMap<>();
+                newNote.put(uid,new User(title,category,note));
+                noteRef.setValue(newNote);
+                Toast.makeText(getActivity(), "Note saved", Toast.LENGTH_SHORT).show();
+                onCompleteForm();
+                break;
         }
+    }
+
+    public void onCompleteForm(){
+        mTitle.getText().clear();
+        mCategory.getText().clear();
+        mNote.getText().clear();
     }
 
 }
