@@ -3,15 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/bottombaritem_News"
+        android:id="@+id/bottombaritem_Upload"
         android:icon="@drawable/upload"
         android:title="Upload"
         app:showAsAction="ifRoom"/>
 
     <item
-        android:id="@+id/bottombaritem_Home"
+        android:id="@+id/bottombaritem_Feed"
         android:icon="@drawable/saved"
-        android:title="Saved"
+        android:title="Feed"
         app:showAsAction="ifRoom"/>
 
     <item
