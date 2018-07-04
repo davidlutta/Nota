@@ -66,17 +66,12 @@ public class UploadFrag extends Fragment implements View.OnClickListener    {
                 String uid = user.getUid();
                 DatabaseReference noteRef = FirebaseDatabase
                         .getInstance()
-                        .getReference(Constants.NODE)
+                        .getReference("note")
                         .child(uid);
-//                Map<String,User> newNote = new HashMap<>();
-//                newNote.put(uid,new User(title,category,note));
-                DatabaseReference ref = noteRef.push();
-                String pushId = ref.getKey();
+                Map<String,User> newNote = new HashMap<>();
                 User user1 = new User(title,category,note);
-                user1.setPushId(pushId);
-//                noteRef.setValue(newNote);
-//                noteRef.setValue();
-                noteRef.setValue("GOGOLE");
+                newNote.put(user1.getmTitle(),new User(title,category,note));
+                noteRef.push().setValue(newNote);
                 Toast.makeText(getActivity(), "Note saved", Toast.LENGTH_SHORT).show();
                 onCompleteForm();
                 break;
