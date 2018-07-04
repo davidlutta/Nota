@@ -62,23 +62,26 @@ public class UploadFrag extends Fragment implements View.OnClickListener    {
                 String title = mTitle.getText().toString().trim();
                 String category = mCategory.getText().toString().trim();
                 String note = mNote.getText().toString();
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                String uid = user.getUid();
-                DatabaseReference noteRef = FirebaseDatabase
-                        .getInstance()
-                        .getReference("note")
-                        .child(uid);
-                Map<String,User> newNote = new HashMap<>();
-                User user1 = new User(title,category,note);
-                newNote.put(user1.getmTitle(),new User(title,category,note));
-                noteRef.push().setValue(newNote);
-                Toast.makeText(getActivity(), "Note saved", Toast.LENGTH_SHORT).show();
-                onCompleteForm();
+                if (title.length() > 1 && category.length() > 1 && note.length() > 1) {
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                    String uid = user.getUid();
+                    DatabaseReference noteRef = FirebaseDatabase
+                            .getInstance()
+                            .getReference("note")
+                            .child(uid);
+                    Map<String, User> newNote = new HashMap<>();
+                    User user1 = new User(title, category, note);
+                    newNote.put(user1.getmTitle(), new User(title, category, note));
+                    noteRef.push().setValue(newNote);
+                    Toast.makeText(getActivity(), "Note saved", Toast.LENGTH_SHORT).show();
+                    onCompleteForm();
+                } else {
+                    Toast.makeText(getActivity(), "Please fill all the fields", Toast.LENGTH_SHORT).show();
+                }
                 break;
         }
     }
-
-    public void onCompleteForm(){
+public void onCompleteForm(){
         mTitle.getText().clear();
         mCategory.getText().clear();
         mNote.getText().clear();
