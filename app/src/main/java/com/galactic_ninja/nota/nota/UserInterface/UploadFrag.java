@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.galactic_ninja.nota.nota.Constants;
 import com.galactic_ninja.nota.nota.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -65,11 +66,17 @@ public class UploadFrag extends Fragment implements View.OnClickListener    {
                 String uid = user.getUid();
                 DatabaseReference noteRef = FirebaseDatabase
                         .getInstance()
-                        .getReference("notes")
+                        .getReference(Constants.NODE)
                         .child(uid);
-                Map<String,User> newNote = new HashMap<>();
-                newNote.put(uid,new User(title,category,note));
-                noteRef.setValue(newNote);
+//                Map<String,User> newNote = new HashMap<>();
+//                newNote.put(uid,new User(title,category,note));
+                DatabaseReference ref = noteRef.push();
+                String pushId = ref.getKey();
+                User user1 = new User(title,category,note);
+                user1.setPushId(pushId);
+//                noteRef.setValue(newNote);
+//                noteRef.setValue();
+                noteRef.setValue("GOGOLE");
                 Toast.makeText(getActivity(), "Note saved", Toast.LENGTH_SHORT).show();
                 onCompleteForm();
                 break;
